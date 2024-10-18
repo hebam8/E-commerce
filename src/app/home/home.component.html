@@ -1,0 +1,28 @@
+
+<div class="row">
+
+  <div class="col-md-2  px-2 py-4" *ngFor="let product of products ">
+
+          <div class="product" >
+              <a [routerLink]="['/productdetails' , product.id]">
+              <img src={{product.imageCover}} class="w-100" alt="">
+              <span class="text-main fw-bold font-sm p-1">{{product.category.name}}</span>
+              <h3 class="h6 fw-bolder p-1"> {{product.title.split(' ').slice(0,2).join(' ')}}</h3>
+           <div class="d-flex  p-2 align-item-center justify-content-between">
+              <span class="text-muted fw-bold font-sm">{{product.price}} </span>
+              <div>
+              <i class="fas fa-star rating-color mx-1"></i>
+              <span class="text-muted font-sm">{{product.ratingsAverage}}</span>
+              </div>
+
+           </div>
+
+          </a>
+          <button (click)="addToCart(product.id)" class="btn bg-main text-white w-75 d-block mx-auto"> Add +</button>
+          </div>
+
+
+
+  </div>
+
+</div>

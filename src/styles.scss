@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Encode+Sans+Semi+Expanded:wght@200;400;600;800;900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    --main-color: #0aad0a;
+    --light-color: #f0f3f2;
+    --font-family: 'Encode Sans Semi Expanded', sans-serif;
+    --rating-color: #ffc908;
+    --shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+body {
+    font-family: var(--font-family) !important;
+}
+
+
+.rating-color {
+    color: var(--rating-color);
+}
+
+.cursur-pointer {
+    cursor: pointer;
+}
+
+
+a, a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.product {
+    &:hover {
+        box-shadow: var(--shadow);
+        border: solid 1px var(--main-color);
+        border-radius: 3px;
+    }
+
+
+    .btn {
+        transition: opacity 1s, transform 1s;
+        transform: translateY(100%);
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
+            transform: translateY(-7%);
+        }
+    }
+}
+
+
+.font-sm {
+    font-size: 14px !important;
+}
+
+
+.text-main {
+    color: var(--main-color) !important;
+}
+
+
+.bg-main {
+    background-color: var(--main-color) !important;
+}
+
+
+.bg-main-light {
+    background-color: var(--light-color) !important;
+}
+
+
+.border_main {
+    border: solid 1px var(--main-color) !important;
+}
+
+
+.shadow {
+    box-shadow: var(--shadow);
+}
+
